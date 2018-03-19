@@ -1,0 +1,14 @@
+package ejercicio03;
+
+public class ejecutable {
+
+	public static void main(String[] args) {
+		perro perro1;
+		perro1 = new perro(1, 20, "16/5/1998", "Caniche");
+		perro1.setPeso(2);
+		perro1.setPeso(3);
+
+		perro1.Mostar();
+	}
+
+}

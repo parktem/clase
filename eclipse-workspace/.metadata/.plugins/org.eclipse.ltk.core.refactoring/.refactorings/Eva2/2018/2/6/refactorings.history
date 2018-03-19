@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Ejercicio14.Rectangulo2&apos; to &apos;reloj&apos;&#x0D;&#x0A;- Original project: &apos;Eva2&apos;&#x0D;&#x0A;- Original element: &apos;Ejercicio14.Rectangulo2&apos;&#x0D;&#x0A;- Renamed element: &apos;Ejercicio14.reloj&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Rectangulo2&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/Fuente&lt;Ejercicio14{Rectangulo2.java[Rectangulo2" matchStrategy="1" name="reloj" qualified="false" references="true" similarDeclarations="false" stamp="1518286639736" textual="false" version="1.0"/>
+</session>

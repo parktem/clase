@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+<title>Métodos SLIDE</title>
+<style type="text/css">
+.arriba{position:absolute; top:0px; left:0px; height:60px; z-index:1;}
+.medio{position:absolute; top:120px; left:0px; height:60px; z-index:2;}
+.abajo{position:absolute; top:240px; left:0px; height:60px; z-index:4;}
+.arreglo{position:absolute; top:240px; left:0px; height:60px; z-index:3;}
+.boton{position:absolute; top:400; left:600; z-index:5;}
+.boton1{position:absolute; top:500; left:520; z-index:5;}
+.estrella{position:absolute; top:70px; left:565; z-index:5;}
+
+</style>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+$(document).ready(function(){
+	$("#boton").click(function(event){
+		$("#abajo").slideUp(4000);
+	});
+});	
+function cambiar(){
+	if(estrella.style.display == "none")
+		estrella.style.display = "";
+}		
+
+</script>
+</head>
+
+<body>
+
+	<div align="center" id="arriba" class="arriba" style="padding:30px 30px 30px 3000px; background-color:red">
+
+	</div>
+
+	<div align="center" id="medio" class="medio" style="padding:30px 30px 30px 3000px; background-color:yellow">
+	</div>
+
+	
+	<div align="center" id="arreglo" class="arreglo" style="padding:30px 30px 30px 3000px; background-color:purple">
+	</div>
+
+	<div align="center" id="abajo" class="abajo" style="padding:30px 30px 30px 3000px; background-color:red">
+	</div>
+
+	<img src="imagenes/strella_roja.png" class="estrella" width="200" style="display:none" id="estrella">
+
+<br><br><br><br><br><br><br><br><br>
+
+
+</body>
+	<input type="button" id="boton" value="Arreglar" class="boton" style="font-size:30; padding:10px">
+	<input type="button" id="boton" value="Arreglar más y mejor" class="boton1" onclick="cambiar()" style="font-size:30; padding:10px">
+
+
+</html>

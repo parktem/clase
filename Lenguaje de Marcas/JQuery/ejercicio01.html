@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Métodos SLIDE</title>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+$(document).ready(function(){
+	$("#deslizar").click(function(event){
+		//Sobre el objeto rectangulo aplicaremos la funcion slideUp
+		$("#rectangulo").slideUp(4000);
+	});
+	$("#deslizar2").click(function(event){
+		$("#rectangulo").slideDown(4000);
+	});
+	$("#Lento").click(function(event){
+		$("#rectangulo").slideUp("slow");
+	});
+	$("#Rapido").click(function(event){
+		$("#rectangulo").slideDown("fast");
+	});
+	$("#Mensaje").click(function(event){
+		$("#rectangulo").slideUp(4000, function(){
+			alert("Efecto terminado");
+		});
+	});
+	$("#Toogle").click(function(event){
+		$("#rectangulo").slideToggle(2000);
+			
+	});
+});
+
+</script>
+</head>
+<body>
+
+	<div align="center" id="rectangulo" style="padding:30px 30px 30px 300px; background-color:yellow">
+	<div align="center" id="rectangulo" style="padding:30px 30px 30px 300px; background-color:green">
+
+<img src="imagenes/asterix.jpg" height="200">
+</div>
+</div>
+<input type="button" id="deslizar" value="Ocultar en 4000 milisegundos">
+<input type="button" id="deslizar2" value="Mostrar en 4000 milisegundos">
+<input type="button" id="Lento" value="Ocultar lento en 4000 milisegundos">
+<input type="button" id="Rapido" value="Mostrar rapido en 4000 milisegundos">
+<input type="button" id="Mensaje" value="Mensaje final">
+<input type="button" id="Toogle" value="Mostrar rapido en 4000 milisegundos">
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Tratamiento de eventos</title>
+
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	$(document).ready(function(){
+		$("#ocultar").click(function(event){
+			$("#rectangulo").fadeOut(4000);
+		});
+		$("#mostrar").click(function(event){
+			$("#rectangulo").fadeIn(4000);
+		});
+		$("#mostrar2").click(function(event){
+			$("#rectangulo").fadeIn(4000, "Swing");
+		});
+		$("#mostrar3").click(function(event){
+			$("#rectangulo").fadeTo(4000, 0.5);
+		});
+		$("#Toggle").click(function(event){
+			$("#rectangulo").fadeToggle(2000);
+		});
+	});	
+
+	
+	
+</script>
+</head>
+
+<body>
+<div id="rectangulo" style="padding:10px 10px 10px 10px; background-color: #ccc">Rectangulo de ejemplo que variara de opacidad</div>
+<input type="Button" id="ocultar" value="Ocultar con FadeOut">
+<input type="Button" id="mostrar" value="Mostrar con FadeIn">
+<input type="Button" id="mostrar2" value="Mostrar con FadeIn Swing">
+<input type="Button" id="mostrar3" value="Mostrar con FadeTo">
+<input type="Button" id="Toggle" value="Toggle">
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Tratamiento de eventos</title>
+
+<style type="text/css">
+#divCoordenadas{border:solid 1 px yellow; padding:10px; width:200px; text-align:center; border-radius; box-shadow:1px 1px 10px #c0c0c0}
+#divEstado{padding:10px; width:200px; text-align:center; border-radius: 5px; box-shadow: 1px 1px 10px #c0c0c0; float:right}
+#divScroll{margin:50px 0; padding:10px; text-align:justify; border-radius:5px; box-shadow: 1px 1px 10px #c0c0c0; height:100px; overflow-y:scroll;}
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	$(document).ready(function(){
+		$(document).on("mousemove", function(e){
+			$("#divCoordenadas").html("<strong>" + e.pageX + "</strong> - <strong>" + e.pageY + "</strong>");
+		});
+		$(document).on("contextmenu", function(e){
+			e.preventDefault(); //Inhabilitamos el menú contextual.
+			$("#divEstado").html("<strong>Click derecho </strong>	");
+		});
+		$("#divScroll").on("scroll", function(e){
+			$("#divEstado").html("<strong>Scroll detectado</scroll>");
+		});
+		$(document)
+	});	
+
+	
+	
+</script>
+</head>
+
+<body>
+
+<div id="divCoordenadas"></div>
+<div id="divEstado"></div>
+<div id="divScroll">
+	<p>
+Callate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borrachoCallate borracho
+	</p>
+</div>
+
+</body>
+
+</html>

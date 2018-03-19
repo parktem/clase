@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+<title>Mostrando posicion de raton</title>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+$(document).ready(function(){
+	$("#texto1").text("Buenos días, caballeros")
+	$("#texto2").html("<input type=button value=Hola>")
+	$(document).mousemove(function(event){
+		$("#texto3").text(event.clientX + " - " + event.clientY);
+		$("#texto4").text(event.pageX + " - " + event.pageY);
+
+	});
+});
+</script>
+
+
+</head>
+
+<body>
+<div id="texto1"></div>
+<div id="texto2"></div>
+<div id="texto3"></div>
+<div id="texto4"></div>
+
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,64 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Menú Ajax Pestañas</title>
+<link rel="stylesheet" href="ejercicio23.css" type="text/css">
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	$(document).ready(function(ev){
+		$(".contenedor div").hide(); //Con esto me estoy refiriendo a todos los div que hay dentro, pero no al de la clase contenedor.
+		$("ul.tabs li:first").addClass("activa");//En este caso me da igual poner ".tabs" porque solo hay una lista de la clase tabs. La subclase "first" es cuando seleccionas el primer elemento de la lista.
+		$(".contenedor div:first").show();	
+		$("ul.tabs li").click(function(ev){
+			//alert($(this));
+			$("ul.tabs li").removeClass("activa");
+			$(this).addClass("activa");
+			$(".contenedor div").hide();
+			var parrafoActivar = $(this).find("b").attr("href");
+			$(parrafoActivar).fadeIn();
+		});	
+	});	
+
+	
+	
+</script>
+</head>
+
+<body>
+<table align="center">
+	<tr>
+		<td>
+			<ul class="tabs">
+				<li><a href="#tab1">Menu1</a></li>
+				<li><a href="#tab2">Menu2</a></li>
+				<li><a href="#tab3">Menu3</a></li>
+				<li><a href="#tab4">Menu4</a></li>
+
+			<div class="contenedor">
+				<div id="tab1">
+					Contenido de 1
+				</div>
+
+				<div id="tab2">
+					Contenido de 2
+				</div>
+
+				<div id="tab3">
+					Contenido de 3
+				</div>
+
+				<div id="tab4">
+					Contenido de 4
+				</div>
+			</div>
+			</ul>
+		
+		</td>
+
+	</tr>
+
+</table>
+
+</body>
+
+</html>

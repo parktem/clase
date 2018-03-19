@@ -1,0 +1,16 @@
+package Sergio;
+
+public class Ejercicio16 {
+
+	public static void main(String[] args) {
+
+		int[] precio = { 2, 4, 3, 7 };
+		String[] fruta = { "", "Manzana", "Pera", "Platanos" };
+
+		for (int i = 0; i < fruta.length; i++) {
+			System.out.println("Los/La " + fruta[i] + " vale " + precio[i] + " euros ");
+		}
+
+	}
+
+}

@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Elementos del objeto DOCUMENT</title>
+
+<script languaje="JavaScript">
+function mostrar(){	
+	for(i=0; i < document.all.length; i++)
+		alert(document.all[i].tagName);
+	for(i=0; i < document.images.length; i++)
+		alert(document.images[i].id)
+}
+
+</script>
+</head>
+<body onload="mostrar()">
+<h1 align=center>Mostrando elementos de Document</h1>
+<center>
+	<img src="imagenes/equis.jpg" height="200" id="imagen1"><br>
+	<img src="imagenes/equis.jpg" height="200" id="imagen2"><br>
+	<input type="button" value="Parar">
+</center>
+
+</body>
+
+</html>

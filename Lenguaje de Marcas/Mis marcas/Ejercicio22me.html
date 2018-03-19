@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Calculadora</title>
+<style type="text/css">
+
+</style>
+<script languaje="JavaScript">
+	function cambiar(){
+		if(operando.value== "+"){
+			resultado.value=parseInt(operacion1.value)+parseInt(operacion2.value);
+		}
+		if(operando.value== "-"){
+			resultado.value=parseInt(operacion1.value)-parseInt(operacion2.value);
+		}
+		if(operando.value== "*"){
+			resultado.value=parseInt(operacion1.value)*parseInt(operacion2.value);
+		}
+		if(operando.value== "/"){
+			resultado.value=parseInt(operacion1.value)/parseInt(operacion2.value);
+		}
+
+	}
+</script>
+</head>
+<body>
+	<h1 align=center>Calculadora</h1>
+	<table align=center border=2 color=blue cellpadding="10" bgcolor=blue>
+
+	<tr>
+	<td><input type="text" size="5" maxlength="20" id="operacion1" name="nombre"></td>
+	<td>
+		<select id=operando>
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+	</td>
+	<td><input type="text" size="5" maxlength="20" id="operacion2" name="nombre"></td>
+	<td> <input type="button" value="Resultado" onclick="cambiar()"></td>
+	<td> <input type="text" size="5" id=resultado value=""> </td>
+	</tr>	
+
+	</table>
+		
+</body>
+
+</html>

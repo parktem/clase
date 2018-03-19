@@ -1,0 +1,41 @@
+package Ejercicio01;
+
+import java.applet.Applet;
+import java.awt.Graphics;
+import java.awt.Image;
+
+public class DibujoAnimado {
+	Applet applet;
+	Image[] imagenes;
+	int cont;
+	int y = 150;
+	int x = 150;
+	boolean salto = false;
+	boolean caida = false;
+
+	public DibujoAnimado(Image[] imagenes, Applet applet) {
+		this.imagenes = imagenes;
+		this.applet = applet;
+	}
+
+	public void dibujar(Graphics g) {
+		g.drawImage(imagenes[cont], x, y, applet);
+	}
+
+	public void actualizar() {
+		cont++;
+		x += 30;
+		if (cont == 4) {
+			cont = 0;
+		}
+		if (salto == true && y > 50) {
+			y -= 55;
+			salto = false;
+			caida = true;
+		}
+		if (caida == true && y < 150) {
+			y += 55;
+		}
+	}
+
+}

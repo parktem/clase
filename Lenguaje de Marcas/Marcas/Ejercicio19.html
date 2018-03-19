@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Mover elementos</title>
+<style type="text/css">
+img{position:absolute}
+#imagen1{left:100; top:200}
+#imagen2{left:500; top:200}
+#imagen3{left:900; top:200}
+</style>
+<script languaje="JavaScript">
+objeto = null;
+ejeZ = 2;
+function cargar(){
+	if(event.srcElement.tagName == "IMG"){
+		objeto = event.srcElement;
+		objeto.style.zIndex = ejeZ;
+		ejeZ++;
+	}
+}
+function descargar(){
+	objeto = null;
+}
+function mover(){
+	if(objeto != null){
+		objeto.style.left = event.x - 100;
+		objeto.style.top = event.y - 100;
+	}
+}
+</script>
+</head>
+<body onmousemove="mover(); event.returnValue=false" onmousedown="cargar()" onmouseup="descargar()">
+	<img id="imagen1" src="imagenes/bart.gif" height=200>
+	<img id="imagen2" src="imagenes/bart2.gif" height=200>
+	<img id="imagen3" src="imagenes/bart3.png" height=200>
+
+</body>
+</html>

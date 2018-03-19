@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Animaciones</title>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+$(document).ready(function(){
+	$("#mover1").click(function(event){
+			//alert("Hola");
+			$("body").animate({backgroundPositionX:"5000px"},10000); 
+			//Animate es de JQuery, y en el segundo parametro se pone cuanto dura. Los 5000px
+
+	});
+	$("#mover2").click(function(event){
+			$("body").animate({backgroundPositionX:"0px"},10000); 
+
+	});
+	$("#mover3").click(function(event){
+			$("body").animate({backgroundPositionX:"5000px"},10000, "swing", function(){
+					alert("se acabó la animación");
+			}); 
+
+	});
+});
+
+
+</script>
+</head>
+
+<body background="imagenes/fondocielo.jpg">
+	<input type="button" id="mover1" value="Desplazar a la izquierda"></input>
+	<input type="button" id="mover2" value="Desplazar a la derecha"></input>
+	<input type="button" id="mover3" value="Función"></input>
+
+
+
+
+</body>
+
+</html>

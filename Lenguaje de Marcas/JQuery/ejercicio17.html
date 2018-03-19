@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Añadir botones</title>
+
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	$(document).ready(function(){
+		$("#escribe").keydown(function(event){
+			$("#parrafo").text("Tecla pulsada");
+			$("#escribe").val("");
+		});
+		$("#escribe").keyup(function(event){
+			$("#parrafo").text("Tecla liberada");
+		});
+	});	
+
+	
+	
+</script>
+</head>
+
+<body>
+	<input type="text" id="escribe" value="">
+<p id="parrafo">
+	Mantén pulsada una tecla y después sueltala
+</p>
+
+</body>
+
+</html>

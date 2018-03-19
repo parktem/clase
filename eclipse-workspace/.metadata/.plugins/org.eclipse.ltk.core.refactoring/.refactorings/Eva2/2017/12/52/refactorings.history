@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;sendnumber&apos; in &apos;pruebaventana.pruebaventana()&apos; to &apos;sendtext&apos;&#x0D;&#x0A;- Original project: &apos;Eva2&apos;&#x0D;&#x0A;- Original element: &apos;pruebaventana.pruebaventana().sendnumber&apos;&#x0D;&#x0A;- Renamed element: &apos;sendnumber&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;sendnumber&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/Fuente&lt;{pruebaventana.java[pruebaventana~pruebaventana@sendnumber!374!395!385!394!QJTextField;!0!false" name="sendtext" references="true" stamp="1514307614552" version="1.0"/>
+</session>

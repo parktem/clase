@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Mover elementos</title>
+<style type="text/css">
+</style>
+<script languaje="JavaScript">
+	var n=1;
+	var z=1;
+	function desaparecer(){
+		n = n - 0.001;
+		bart1.style.opacity = n; 
+	}
+	function disminuir(){
+		z = z - 0.1;
+		bart1.style.width = z;
+	}
+</script>
+</head>
+<body onload="setInterval('desaparecer()', 1)" onload="setInterval('disminuir()', 1)">
+<h1 align=center>Desaparecer elemento</h1>
+<img src="imagenes/bart1.gif" id="bart1" width="200">
+
+</body>
+
+</html>

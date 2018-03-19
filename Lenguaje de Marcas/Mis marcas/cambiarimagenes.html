@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cambiar imagenes</title>
+<style type="text/css">
+.imagen1{width: 100px;}
+.imagen2{width: 100px;}
+.imagen3{width: 100px;}
+.imagen4{width: 100px;}
+.imagen5{width: 100px;}
+
+</style>
+<script languaje="Javascript">
+	function cambiar1(){
+		imagen5.src = "imagenes/bart1.gif";
+	}
+
+	function cambiar2(){
+		imagen5.src = "imagenes/bart2.gif";
+	}
+	function cambiar3(){
+		imagen5.src = "imagenes/bart3.png";
+	}
+	function cambiar4(){
+		imagen5.src = "imagenes/equis.jpg";
+	}
+
+
+</script>	
+</head>
+<body>
+<h1 align=center>Cambiar imagenes</h1><br>	
+<table align="center" border="1" width="70%" cellpadding="50" cellspacing="20">
+<tr align=center>
+<td align=center><div><img src=imagenes/equis.jpg class=imagen5 id=imagen5></div></td>
+</tr>
+<tr>
+<td><img src=imagenes/bart2.gif class=imagen2 id=imagen2 onclick="cambiar2()"></td>
+<td><img src=imagenes/bart3.png class=imagen3 id=imagen3 onclick="cambiar3()"></td>
+<td><img src=imagenes/equis.jpg class=imagen4 id=imagen4 onclick="cambiar4()"></td>
+<td><img src=imagenes/bart1.gif class=imagen1 id=imagen1 onclick="cambiar1()"></td>
+</tr>
+</table>
+</body>
+</html>

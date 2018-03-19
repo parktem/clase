@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Transición desde estilos III</title>
+
+<style type="text/css">
+.primero, .segundo{display:none; padding:5px; border:1px solid #ccc; background-color: #f1f1f1; position:relative; width: 200}
+#segundo{position:absolute; top:100;}
+#primero:hover .primero{display: block}
+#segundo:hover .segundo{display: block}
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	$(document).ready(function(){
+		
+	});	
+
+	
+	
+</script>
+</head>
+
+<body>
+<ul>
+	<li id="primero">Mostrar el primer DIV oculto
+		<div class="primero">Contenido del primer DIV</div>
+
+	</li>
+
+	<li id="segundo">Mostrar el segundo DIV oculto
+		<div class="segundo">Contenido del primer DIV</div>
+
+	</li>
+
+</ul>	
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+
+public class Ejercicio94me {
+
+	public static void main(String[] args) {
+		String frase1 = "Había vez circo alegraba el ";
+		String frase2 = "una un que siempre corazón sin temer jamás";
+		String frase3 = "";
+		int palabras = 0;
+		int contadorespacios = frase1.indexOf(" ", 0);
+		while (contadorespacios != -1) {
+			palabras++;
+			contadorespacios = frase1.indexOf(" ", contadorespacios + 1);
+		}
+		System.out.println(palabras);
+	}
+
+}

@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Añadir una imagen</title>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+
+	$(document).ready(function(){
+		$("#mover1").click(function(){
+			//alert("Hola");
+			$("#capa0").animate({outlineWidth:"15px"});
+
+		});
+		$("#mover2").click(function(){
+			$("#capa0").animate({outlineWidth:"15px"}, 500);
+		});
+	});
+	
+</script>
+</head>
+
+<body>
+<span style="outline:1px solid black" id="capa0">Capa donde cambiaremos la propiedad outlinewidth</span><br><br><br>
+<input type="button" value="Ampliar marco" id="mover1"><br>
+<input type="button" value="Ampliar marco2" id="mover2"><br>
+
+</body>
+
+</html>

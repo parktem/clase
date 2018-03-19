@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Galería de imagenes</title>
+<style type="text/css">
+#galeria{position:relative; width: 600; height: 400; overflow: hidden; border:10px solid #333; margin:0 auto; padding:0; border-radius: 40px}
+#galeria p{opacity:0.7; position:absolute; left:100px; bottom: 30px; display:block; width: 400px; height: 24px; padding: 5px; background: #990000; color: #eee; font-size: 18px;text-align: center; line-height: 20px}
+
+
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	$(document).ready(function(ev){
+		$("#galeria div:gt(0)").hide();	 //Al metodo gt hay que pasarle un entero, y el entero señalará un elemento que no será señalado.
+
+		setInterval(function(){
+			//alert("llega");
+			$("#galeria div:first-child").fadeOut().next("div").fadeIn(1000).end().appendTo("#galeria");
+		}, 4000);
+	});	
+
+	
+	
+</script>
+</head>
+
+<body>
+<div id="galeria">
+		<div><img src="imagenes/bart1.gif" width="600" height="400"><p>Imagen 1</p></div>
+		<div><img src="imagenes/bart2.gif" width="600" height="400"><p>Imagen 2</p></div>
+		<div><img src="imagenes/bart3.png" width="600" height="400"><p>Imagen 3</p></div>
+</div>
+
+
+</body>
+
+</html>

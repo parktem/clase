@@ -1,0 +1,10 @@
+20:55:28 **** Incremental Build of configuration Debug for project C++ ****
+Info: Internal Builder is used for build
+g++ -o C++.exe ejercicio01.o main.o 
+main.o: In function `main':
+C:\Users\Alejandro\eclipse-workspace\C++\Debug/../main.cpp:11: multiple definition of `main'
+ejercicio01.o:C:\Users\Alejandro\eclipse-workspace\C++\Debug/../ejercicio01.cc:11: first defined here
+collect2.exe: error: ld returned 1 exit status
+
+20:55:28 Build Finished (took 540ms)
+

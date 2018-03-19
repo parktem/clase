@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Eventos</title>
+
+<script languaje="JavaScript">
+i = 0;
+function cambiar(){
+	if(i == 0)	
+		imagen.src = "imagenes/equis.jpg";
+	else
+		imagen.src = "imagenes/punto.jpg";
+	i = (i+1) % 2;
+} 	
+</script>
+</head>
+<body>
+<h1 align=center>Evento onClick</h1>
+
+<img id="imagen" src="imagenes/punto.jpg" width=150>
+
+<input type="button" value="Cambiar" onclick="cambiar()">
+</body>
+</html>

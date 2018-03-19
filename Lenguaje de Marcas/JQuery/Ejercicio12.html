@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Parar animación</title>
+
+<style type="text/css">
+#panel, #flip{padding:5px; font-size:18px; text-align:center; background-color: #555; color:white; border:solid 1px #666; border-radius: 10px;}
+
+#panel{padding:50px; display: none}
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	$(document).ready(function(){
+		$("#flip").click(function(){
+			//alert("Hola");
+			$("#panel").slideDown(5000);
+		});	
+		$("#parar").click(function(){
+			$("#panel").stop();
+		});
+	});	
+
+	
+	
+</script>
+</head>
+
+<body>
+<button id="parar">Parar animación</button>
+<div id="flip">Click aqui para aumentar el panel</div>
+<div id="panel">Felicidades Maite</div>
+
+</body>
+
+</html>

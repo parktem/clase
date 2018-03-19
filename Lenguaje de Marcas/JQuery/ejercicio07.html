@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Añadir una imagen</title>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+
+	x = $(document);
+	x.ready(inicializaEventos);
+
+	function inicializaEventos(){
+		var objetos;
+		objetos = $("a");
+		objetos.mouseover(entrarMouse);
+		objetos.mouseout(salirMouse);
+	}
+
+	function entrarMouse(){
+		$(this).css("background-color", "yellow");
+	}
+
+	function salirMouse(){
+		$(this).css("background-color", "white");
+	}
+	
+</script>
+</head>
+
+<body>
+<a href="http://www.marca.es">Marca</a><br>
+<a href="http://www.reconstitucion.net">Reconstitucion</a><br>
+<a href="http://www.ujce.es">UJCE</a><br>
+
+</body>
+
+</html>

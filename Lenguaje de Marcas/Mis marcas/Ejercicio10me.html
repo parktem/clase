@@ -1,0 +1,38 @@
+<html>
+
+<head>
+<title>Cambiar</title>
+<style type="text/css">
+.bloque1{position:absolute; top:20; left:20; background-color:yellow; width:300px;}
+.bloque2{position:absolute; top:20; left:500; background-color:blue; width:300px;}
+</style>
+<script languaje="Javascript">
+function cambiar(){
+	if(b1.className == "bloque1"){
+		b1.className = "bloque2";
+		b2.className = "bloque1";
+	}else{
+		b1.className = "bloque1";
+		b2.className = "bloque2";
+	}
+}
+
+</script>
+</head>
+
+
+<body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>	
+<div class=bloque1 id=b1>
+<img src=imagenes/punto.jpg width="100">
+ "Escenario estresado". Así califican los economistas al peor escenario posible dentro de una simulación de lo que puede suceder en la economía a medio plazo. En ese escenario apocalíptico, el vigilante de las cuentas públicas (la Airef) ha imaginado un futuro en el que la incertidumbre catalana impacta de forma evidente en la economía hasta dejar el crecimiento económico esperado en 2018 en un más que moderado 1,5%, frente al 2,7% que predicen las distintas casas de análisis.
+ </div>
+
+ <div class=bloque2 id=b2>
+<img src=imagenes/equis.jpg width="100">
+ PP y PSOE trabajan codo con codo, junto a Ciudadanos, en la respuesta ante el desafío independentista; pero su actuación en Catalunya puede jugarles una mala pasada en el Congreso, donde encuentran el rechazo del resto de fuerzas por esa posición. La aplicación del artículo 155 de la Constitución para zanjar cualquier atisbo de declaración de independencia por parte del Govern de Carles Puigdemont y Oriol Junqueras hace peligrar los Presupuestos Generales del Estado para 2018 y descafeína la apuesta de Pedro Sánchez para la reforma constitucional.
+</div>
+<br><br><br><br><br>
+ <input type="button" value="cambiar de lado" onclick="cambiar()">
+</body>
+</html>

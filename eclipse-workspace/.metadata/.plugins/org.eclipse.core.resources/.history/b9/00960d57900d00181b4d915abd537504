@@ -1,0 +1,58 @@
+package Ejercicio14;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Rectangulo {
+
+	private int posX, posY, anchura, altura;
+	private int direccion;
+	public static final int UP = 0;
+	public static final int DOWN = 1;
+	public static final int LEFT = 2;
+	public static final int RIGHT = 3;
+	private Color color;
+
+	public Rectangulo(int posX, int posY, int anchura, int altura, Color color, int direccion) {
+		// fillRoad(posX, posY, anchura, altura, direccion);
+	}
+
+	public void actualizar() {
+
+		switch (direccion) {
+		case UP:
+			posY--;
+			if (posY < 90)
+				direccion = RIGHT;
+			break;
+
+		case RIGHT:
+			posX++;
+			if (posX > 90)
+				direccion = DOWN;
+
+			break;
+
+		case DOWN:
+			posY++;
+			if (posY >= 100)
+				direccion = LEFT;
+
+			break;
+
+		case LEFT:
+			posX--;
+			if (posX <= 80)
+				direccion = UP;
+
+			break;
+
+		}
+	}
+
+	public void dibujar(Graphics g) {
+		g.setColor(color);
+		g.fillRect(posX, posY, anchura, altura);
+	}
+
+}

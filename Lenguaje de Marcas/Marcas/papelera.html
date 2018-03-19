@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Mover elementos</title>
+<style type="text/css">
+img{position:absolute}
+#imagen1{left:100; top:200}
+#imagen2{left:500; top:200}
+#imagen3{left:900; top:200}
+#imagen4{left:1300; top:200}
+#imagen5{left:1300; top:200}
+</style>
+<script languaje="JavaScript">
+objeto = null;
+ejeZ = 2;
+cont=0;
+function cargar(){
+	if(event.srcElement.tagName == "IMG"){
+		objeto = event.srcElement;
+		objeto.style.zIndex = ejeZ;
+		ejeZ++;
+	}
+}
+function descargar(){
+	objeto = null;
+}
+function mover(){
+	if(objeto != null){
+		objeto.style.left = event.x - 100;
+		objeto.style.top = event.y - 100;
+	}
+}
+function borrar(){
+	objeto.style.visibility="hidden";
+	cont++;
+	if(cont==3){
+		imagen4.src="imagenes/fuego.png";
+	}
+	
+}
+
+</script>
+</head>
+<body onmousemove="mover()"; event.returnValue="false" >
+	<img onmousedown="cargar()" onmouseup="descargar()" id="imagen1" src="imagenes/bart.gif" height=200>
+	<img onmousedown="cargar()" onmouseup="descargar()" id="imagen2" src="imagenes/bart2.gif" height=200>
+	<img onmousedown="cargar()" onmouseup="descargar()" id="imagen3" src="imagenes/bart3.png" height=200>
+	<img onmouseover="borrar()" onmouseout="cambiar()" id="imagen4" src="imagenes/papelera.png" height=200>
+</body>
+</html>

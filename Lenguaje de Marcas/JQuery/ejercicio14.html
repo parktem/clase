@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Añadir en el body</title>
+
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+
+	var imagen = $("<img>", {src:"imagenes/asterix.jpg", id:"imagen", css:{"padding": "2px", "cursor": "pointer"}, 
+		click:function(e){document.location="ejercicio13.html"}});
+
+	$(document).ready(function(){
+		$("#boton").click(function(){
+			$("body").append(imagen);
+
+		});
+	});	
+
+	
+	
+</script>
+</head>
+
+<body>
+<input type="Button" id="boton" value="Añadir">
+
+</body>
+
+</html>

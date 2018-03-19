@@ -1,0 +1,11 @@
+package ejercicio04;
+
+public class ejecutable {
+
+	public static void main(String[] args) throws Exception {
+		Nif nif1;
+		nif1 = new Nif(47193796, 'O');
+		nif1.Mostrar();
+	}
+
+}

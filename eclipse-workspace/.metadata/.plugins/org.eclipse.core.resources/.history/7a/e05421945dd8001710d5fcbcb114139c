@@ -1,0 +1,14 @@
+
+public class Ejercicio96me {
+
+	public static void main(String[] args) {
+		String frase1 = "Había una vez un circo";
+		String frase2 = "";
+		for (int i = frase1.length(); i >= 0; i--) {
+			frase2 = frase2.concat(Character.toString(frase1.charAt(i)));
+		}
+		System.out.println(frase2);
+
+	}
+
+}

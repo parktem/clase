@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Primer ejercicio con Javascript</title>
+<script languaje="Javascript">
+function mostrar1(){
+	if(parrafo2.style.display == "none"){
+		parrafo2.style.display = "";
+	}else{
+		parrafo2.style.display = "none";
+	}
+}
+function mostrar2(){
+	if(parrafo3.style.display == "none"){
+		parrafo3.style.display = "";
+	}else{
+		parrafo3.style.display ="none";
+	}
+}
+</script>
+</head>
+<body>
+	<h1 id="parrafo1" onclick="mostrar1()">Remplazando HTML dinámicamente</h1>
+	<h2 id="parrafo2" onclick="mostrar2()" style="display:none">Esta es la segunda cabecera</h2>
+	<p style="display:none" id="parrafo3">Esto es lo que se ve si se hace click sobre ambas cabeceras. Es similar en estilo al software de presentación, en el que contenido se muestra según las acciones del usuario</p>
+
+
+
+</body>

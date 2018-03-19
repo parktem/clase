@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;k&apos; in &apos;Ejercicio01.Caminar.init()&apos; to &apos;j&apos;&#x0D;&#x0A;- Original project: &apos;Eva3&apos;&#x0D;&#x0A;- Original element: &apos;Ejercicio01.Caminar.init().k&apos;&#x0D;&#x0A;- Renamed element: &apos;k&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;k&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/Fuente&lt;Ejercicio01{Caminar.java[Caminar~init@k!437!445!441!441!I!0!false" name="j" references="true" stamp="1521201668694" version="1.0"/>
+</session>

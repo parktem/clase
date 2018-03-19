@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Métodos SLIDE</title>
+<style type="text/css">
+.arriba{position:absolute; top:0px; left:0px; height:60px}
+.medio{position:absolute; top:120px; left:0px; height:60px}
+.abajo{position:absolute; top:240px; left:0px; height:60px}
+.arreglo{position:absolute; top:240px; left:0px; height:60px}
+.boton{position:absolute; top:400; left:600;}
+
+</style>
+
+<script languaje="Javascript">
+function cambiar(){
+	if(abajo.style.display == ""){
+		abajo.style.display = "none";
+	}
+}
+
+
+</script>
+</head>
+
+<body>
+
+	<div align="center" id="arriba" class="arriba" style="padding:30px 30px 30px 3000px; background-color:red">
+
+	</div>
+
+	<div align="center" id="medio" class="medio" style="padding:30px 30px 30px 3000px; background-color:yellow">
+	</div>
+
+	
+	<div align="center" id="arreglo" class="arreglo" style="padding:30px 30px 30px 3000px; background-color:purple">
+	</div>
+
+	<div align="center" id="abajo" class="abajo" style="padding:30px 30px 30px 3000px; background-color:red">
+	</div>
+<br><br><br><br><br><br><br><br><br>
+	<input type="button" value="arreglar" onclick="cambiar()" class="boton" style="font-size:30; padding:10px">
+
+
+</body>
+</html>

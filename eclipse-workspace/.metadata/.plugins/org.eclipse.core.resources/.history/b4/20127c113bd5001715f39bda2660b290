@@ -1,0 +1,11 @@
+import Principal.Principal;
+public class Secundario {
+	
+
+	public static void main(String[] args) {
+		Principal importado;
+		int x=3;
+		int y=2;
+	}
+
+}

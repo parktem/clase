@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+<script languaje="Javascript">
+function time(){
+	var fecha = new Date();
+	var horas = fecha.getHours();
+	var minutos = fecha.getMinutes();
+	var segundos = fecha.getSeconds();
+
+	horaStr = ((hora<10)?"0":"") + horas;
+	horaStr += ((minutos<10)?":0":":") + minutos;
+	horaStr += ((segundos<10)?":0":":") + segundos;
+
+	caja.value = horaStr;
+
+}
+
+
+</script>
+</head>
+
+
+<body onload="intervalo=setInterval('time()', 1000)">
+<center>
+<h1>Reloj en JavaScript</h1><br>
+<input id="caja" value="" size="8"><br><br>
+<input type=button value="Parar el reloj" onclick="clearInterval(intervalo)">
+</center>
+
+</body>
+
+
+</html>

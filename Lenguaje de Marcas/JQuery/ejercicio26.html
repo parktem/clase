@@ -1,0 +1,85 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Chequeo de formularios</title>
+<style type="text/css">
+
+form{margin:lem;}
+label{display:block; margin-left:.5em 0}
+
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	var validosNombre = "^[a-z A-Z]{4,30}$";
+	var validosApellido = "^[a-z A-Z]{4,30}$";
+	var validosEmail = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9]{2,4}$"; //El circunflejo afecta a lo que va entrecorchetes después, pero finalizado el corchete, no. Lo que se pone fuera de corchetes es obligatorio, como el arroba y el punto.
+	var validosTextArea = "^[a-z A-Z]{12, 100}$"
+	$(function(){
+		checkForm("#contacto");
+	});
+
+	function checkForm(idForm){ //La función checkForm espera recibir un parametro
+		$(idForm + " *").on("change keyup", function(){
+			if(checkInput("#nombre", validosNombre) && (checkInput("#apellidos", validosApellido)) && (checkInput("#email", validosEmail)) && (checkSelect("#edad")) && (checkTextArea("#comentario")) && (checkRadioBox("#legal")) && (checkRadioBox("#boletin")))
+				$(idForm + " button.submit").removeAttr("disabled");
+			else
+				$(idForm + " button.submit").attr("disabled", "disabled");
+		});
+
+	}
+
+
+	function checkInput(idInput, validacion){
+		return $(idInput).val().match(validacion) ? true : false;
+	}
+
+	function checkSelect(idSelect){
+		return $(idSelect).val() ? true : false;
+	}
+
+	function checkTextArea(idText){
+		return $(idInput).val().length() > 12 ? true : false
+	}	
+
+	function checkRadioBox(nombreRadioBox){
+		return $(nombreRadioBox).is(":checked") ? true : false;
+	}
+	
+</script>
+</head>
+
+<body>
+<form name="contacto" id="contacto" method=post> <!--para trabajar desde javascript, se usa la propiedad id, para enviar los datos datos se utiliza la propiedad name-->
+<label for="nombre">Nombre</label> <!--Label sirve para poner un valor fijo-->
+<input name="nombre" id="nombre" size="30"> <!--La etiqueta está relacionada con el input a través de la propiedad for-->
+<label for="apellidos">Apellidos</label>
+<input name="apellidos" id="apellidos" size="40">
+<label for="email">Email</label>
+<input name="email" id="email" size="40">
+<label for="edad">Edad</label>
+
+<select name="edad" id="edad">
+	<option></option>
+	<option value="18-25">De 18 a 25 años </option>
+	<option value="26-45">De 26 a 45 años </option>
+	<option value="46-65">De 46 a 65 años </option>
+	<option value="65+">Más de 65 años</option>
+</select>
+
+<label for="Comentario">Comentario</label>
+<textarea name="comentario" id="comentario" cols="40" rows="4"></textarea>
+<label for="legal">
+	<input type="checkbox" name="legal" id="legal">Estoy de acuerdo </label> <!-- En este caso por ejemplo el label está asociado al input, y con clickar en el label se marca el checkbox-->
+	<label>¿Quiere recibir nuestro boletín?
+		<input type="radio" name="boletin" value="si">Sí
+		<input type="radio" name="boletin" value="no">No
+	</label>	
+
+<button class="submit" disabled>Enviar</button> <!--Enviar está desactivado>
+
+</form>
+
+</body>
+
+</html>

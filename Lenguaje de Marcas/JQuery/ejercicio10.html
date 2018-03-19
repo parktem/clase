@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Animación</title>
+
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	$(document).ready(function(){
+		$("button").click(function(){//Nos referimos a él sin almohadilla, porque solo hay un objeto de la clase button. Si hubiese más ya no valdría
+			//alert("Hola");
+			var div = $("div"); //A partir de ahora, me referiré a div con la variable div, sin dolar ni nada.
+			div.animate({width:'300', opacity:'0.4'}, 1000); //opacity es para la opacidad, 1000 son los milisegundos y sustituye a slow
+			div.animate({height:'300'}, "slow");
+			div.animate({height:'100'}, "slow");
+			div.animate({width:'100'}, "slow");
+
+
+
+		}); 
+	});	
+
+	
+	
+</script>
+</head>
+
+<body>
+<button>Iniciar Animacion</button>
+<div style="background: yellow; height:100px; width:100px; position:absolute"></div>
+
+</body>
+
+</html>

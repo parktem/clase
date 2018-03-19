@@ -1,0 +1,29 @@
+package Ejercicio01;
+
+import java.applet.Applet;
+import java.awt.Graphics;
+import java.awt.Image;
+
+public class DibujoAnimado {
+	Applet applet;
+	Image[] imagenes;
+	int cont;
+	int x = 150;
+
+	public DibujoAnimado(Image[] imagenes, Applet applet) {
+		this.imagenes = imagenes;
+		this.applet = applet;
+	}
+
+	public void dibujar(Graphics g) {
+		g.drawImage(imagenes[cont], x, 150, applet);
+	}
+
+	public void actualizar() {
+		cont++;
+		if (cont == 4) {
+			cont = 0;
+		}
+	}
+
+}

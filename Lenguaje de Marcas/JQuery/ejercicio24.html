@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Galería de imagenes</title>
+<style type="text/css">
+
+div{width: 600; height: 400; overflow: hidden}
+li{float:left; list-style:none;}
+ul, li{padding:0px; margin:0px;}
+
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	$(document).ready(function(ev){
+		$("#next").click(function(ev){
+			//alert("He pulsado en next");
+			$("#galeria li:first").appendTo("#galeria:last");
+		});	
+
+		$("#before").click(function(ev){
+			//alert("He pulsado en before");
+			$("#galeria li:last").prependTo("#galeria:first");
+		});	
+	});	
+
+	
+	
+</script>
+</head>
+
+<body>
+<div>
+	<ul id="galeria">
+		<li><img src="imagenes/bart1.gif" width="600" height="400"></li>
+		<li><img src="imagenes/bart2.gif" width="600" height="400"></li>
+		<li><img src="imagenes/bart3.png" width="600" height="400"></li>
+	</ul>
+</div>
+
+<button id="next">Siguiente</button>
+<button id="before">Anterior</button>
+
+</body>
+
+</html>

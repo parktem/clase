@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>Draggable</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+	
+<style type="text/css">
+.dibujo{position:relative; left:200px;}
+
+</style>
+
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<link rel="stylesheet" href="jquery-ui.ccs">
+
+
+<script languaje="Javascript">
+	$(document).ready(function(ev){
+		
+		tope=0;
+		
+		izquierda=0;
+		
+		$(".dibujo").draggable({
+			start:function(event, ui){//Evento que tiene predefinido, start significa "cuando empieces a arrastar"
+				tope = ui.position.top;
+				tope = ui.position.left;
+			},
+			
+			stop:function(event, ui){
+				this.style.top = tope;
+				this.style.left = izquierda;
+
+			}
+
+
+		});	
+		//$("#calendario").datepicker()({
+
+		//})	
+
+		$( "#ordenadcion" ).sortable();
+    	
+
+	});	
+
+
+	
+	
+</script>
+
+</head>
+
+<body>
+
+<input type="text" id="calendario" style="left:200px">
+<div id="papelera1" class="dibujo"><img src="imagenes/bart1.gif" width="100"></div>
+<div id="papelera2" class="dibujo"><img src="imagenes/bart1.gif" width="100"></div>
+<div id="papelera3" class="dibujo"><img src="imagenes/bart1.gif" width="100"></div>
+<div id="papelera4" class="dibujo"><img src="imagenes/bart1.gif" width="100"></div>
+<div id="papelera5" class="dibujo"><img src="imagenes/bart1.gif" width="100"></div>
+
+		<ul id="ordenadcion">
+			<li>Futbol</li>
+			<li>Motor</li>
+			<li>Basket</li>
+			<li>Tenis</li>
+		</ul>
+
+
+</body>
+
+</html>

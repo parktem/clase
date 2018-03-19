@@ -1,0 +1,49 @@
+package pruebas;
+
+import java.awt.Button;
+import java.awt.Event;
+import java.awt.Frame;
+import java.awt.MenuItem;
+import java.awt.Panel;
+import java.awt.TextArea;
+import java.awt.TextField;
+
+public class Objetos extends Frame {
+	TextArea textArea;
+
+	public static void main(String[] args) {
+		Objetos objeto = new Objetos();
+	}
+
+	public Objetos() {
+		super("Trabajo con objetos");
+		setup();
+		pack();
+		resize(400, 400);
+		show();
+	}
+
+	public void setup() {
+		Panel principal = new Panel();
+		Panel botones = new Panel();
+		principal.add(new TextField("Hola", 15));
+		botones.add(new Button("Hola"));
+		add("Center", principal);
+		add("South", botones);
+	}
+
+	public boolean handleEvent(Event ev) {
+		if (ev.id == Event.WINDOW_DESTROY) {
+			System.exit(0);
+			return true;
+		} else if (ev.id == Event.ACTION_EVENT) {
+			if (ev.target instanceof MenuItem) {
+				if (ev.arg.equals("Salir")) {
+					Editor editor = new Editor();
+					return true;
+				}	
+			}
+		}
+		return false;
+	}
+}

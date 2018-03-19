@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Añadir una imagen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	var imagen = $("<img>", {src:"imagenes/asterix.jpg", id:"imagen", width:"150",
+		css:{"padding":"2px", "cursor":"pointer"},
+		click: function(ev){document.location="ejercicio01.html"}});
+	$(document).ready(function(){
+		$("#boton").click(function(event){
+			//alert("Hola");
+			$("body").append(imagen); //append es introducir
+		});	
+	});
+	
+</script>
+</head>
+
+<body>
+<input type="button" id="boton" value="Añadir">
+</body>
+
+</html>

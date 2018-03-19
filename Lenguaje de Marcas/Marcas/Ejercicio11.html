@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Movimiento</title>
+<style type="text/css">
+#cruz{position:absolute; top:200px}
+</style>
+<script languaje="JavaScript">
+function posicion(){
+	//alert("Se ejecuta al cargar la página");
+	cruz.style.left = parseInt(cruz.style.left) + 10;
+}
+</script>
+</head>
+<body onload="setInterval('posicion()', 100)">
+<div id="cruz" style="left:100">
+<img src="imagenes/equis.jpg" height=100>
+</div>
+
+
+
+
+</body>
+</html>

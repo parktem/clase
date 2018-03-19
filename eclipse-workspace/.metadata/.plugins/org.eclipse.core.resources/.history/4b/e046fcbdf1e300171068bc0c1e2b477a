@@ -1,0 +1,27 @@
+package ejercicio04;
+
+public class Nif {
+
+	int dni;
+	char letra;
+	static char tabla[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V',
+			'H', 'L', 'C', 'K', 'E' };
+
+	public Nif(int dni, char l) throws Exception {
+		System.out.println("Hola");
+		if ((dni < 10000000) || (dni > 99999999))
+			throw new Exception("El DNI no es correcto"); // throw es para lanzar una excepción
+		this.dni = dni;
+		letra = l;
+		for (int i = 0; i < tabla.length; i++) {
+			if (letra != tabla[dni % 23]) {
+				throw new Exception("La letra no es correcta");
+			}
+		}
+		System.out.println("Hola");
+	}
+
+	public Nif(int dni) {
+		
+	}
+}

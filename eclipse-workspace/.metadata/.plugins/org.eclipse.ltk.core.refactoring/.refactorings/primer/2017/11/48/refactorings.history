@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;public static void Sumar(int x, int y)&apos; from &apos;primer.prueba1.main()&apos; to &apos;primer.prueba1&apos;&#x0D;&#x0A;- Original project: &apos;primer&apos;&#x0D;&#x0A;- Method name: &apos;Sumar&apos;&#x0D;&#x0A;- Destination type: &apos;primer.prueba1&apos;&#x0D;&#x0A;- Declared visibility: &apos;public&apos;" comments="false" description="Extract method &apos;Sumar&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/Fuente&lt;primer{prueba1.java" name="Sumar" replace="false" selection="134 14" stamp="1512030266688" version="1.0" visibility="1"/>
+</session>

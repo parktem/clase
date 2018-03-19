@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Creando formularios</title>
+</head>
+<body>
+<h1 align="center">Trabajando con formularios</h1>
+<form method="post" action="programa o página web">
+<table border=1 align=center>
+<tr>
+	<td>Introduce tu nombre : </td>
+	<td><input type="text" size="50" maxlength="20" id="nombre" name="nombre"></td>
+</tr>
+<tr>
+	<td>Provincia : </td>
+	<td>
+		<select id=provincia name=provincia>
+			<option value=46>Teruel</option>
+			<option value=50>Zaragoza</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td>Edad : </td>
+	<td>Mayor de 60<input type="radio" name="edad" value=1>
+	    Entre 30 y 60<input type="radio" name="edad" value=2>
+	    Menor de 30<input type="radio" name="edad" value=3>
+	</td>
+</tr>
+<tr>
+	<td>Deportes : </td>
+	<td>Fútbol<input type="checkbox" name="deportes" value=1>
+	    Baloncesto<input type="checkbox" name="deportes" value=2>
+	    Tenis<input type="checkbox" name="deportes" value=3>
+	</td>
+</tr>
+<tr>
+	<td>Comentario : </td>
+	<td><textarea name="comentario" cols="40" rows="4">Escribe un comentario...</textarea></td>
+</tr>
+<tr>
+	<td><input type="submit" value="Enviar"></td>
+	<td><input type="reset" value="Borrar"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

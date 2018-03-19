@@ -1,0 +1,17 @@
+
+public class Ejercicio97me {
+
+	public static void main(String[] args) {
+		String frase1 = "Había una vez un circo ";
+		//frase1 = frase1.replace(" ", "a ");
+		//System.out.println(frase1);
+		String frase2 = "a ";
+		int espacio = frase1.indexOf(" ", 0);
+		while(espacio != -1) {
+			frase1 = frase1.substring(espacio, espacio+2).concat(frase2);
+			espacio = frase1.indexOf(" ", espacio+1);
+		}
+		System.out.println(frase1);
+	}
+
+}

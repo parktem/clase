@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Animación combinada</title>
+
+<style type="text/css">
+#divAnimado1, #divAnimado2, #divAnimado3{
+	width:150px; height:150px; background-color: red; margin-left: 50px; margin-top: 50px;
+}
+
+#divAnimado2{
+	background-color: yellow
+}
+
+#divAnimado3{
+	background-color: purple;
+}
+
+</style>
+
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script languaje="Javascript">
+	$(document).ready(function(){
+		$("#divAnimado1").animate({marginLeft:'600px'},1500);
+		$("#divAnimado2").animate({width:'200px', height:'200px'});
+		$("#divAnimado3").animate({width:'200px', marginLeft:'600px'})
+		.animate({marginLeft:'400px'}, 'slow');
+	});	
+
+	
+	
+</script>
+</head>
+
+<body>
+<div id="divAnimado1"></div>
+<div id="divAnimado2"></div>
+<div id="divAnimado3"></div>
+
+</body>
+
+</html>
